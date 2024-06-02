@@ -8,4 +8,5 @@ import (
 
 func main() {
 	fmt.Println(gin.Version)
+	fmt.Println(gin.Version)
 }
