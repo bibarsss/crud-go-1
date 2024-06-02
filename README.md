@@ -1,2 +1,2 @@
-# crud-go-1
+# simple-rest-api-go
 Using gin, PostgreSQL, sqlx
