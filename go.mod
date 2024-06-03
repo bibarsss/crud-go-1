@@ -1,4 +1,4 @@
-module example/crud-go-1
+module github.com/bibarsss/simple-rest-api-go
 
 go 1.22.3
 
