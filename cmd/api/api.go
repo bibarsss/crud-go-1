@@ -22,13 +22,18 @@ func NewAPIServer(addr string, db *sql.DB) *APIServer {
 }
 
 func (s *APIServer) Run() error {
-	router := gin.Default()
-	apiV1 := router.Group("api/v1")
+	r := gin.Default()
+
+	apiV1 := r.Group("api/v1")
 
 	userHandler := user.NewHandler()
 	userHandler.RegisterRoutes(apiV1)
 
 	log.Println("Listening on", s.addr)
 
-	return http.ListenAndServe(s.addr, router)
+	r.GET("/", func(c *gin.Context) {
+		c.IndentedJSON(http.StatusOK, "Hello world pa emoe")
+	})
+
+	return http.ListenAndServe(s.addr, r)
 }
