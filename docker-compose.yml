@@ -2,4 +2,4 @@ version: "3"
 
 services:
   postgres:
-    image: 
+    image: postgres:16.3-alpine
